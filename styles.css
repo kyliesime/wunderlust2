@@ -1,1 +1,465 @@
 /* CSS by Kylie Sime */
+
+/* -----------CSS reset start--------------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* -----------CSS reset end---------------------- */
+
+/* -----------COLOR / FONT START----------------------- */
+:root{
+	--yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --dark-gray: #222222;
+    --light-gray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+  @import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat&display=swap');
+
+        /* use this for font:
+        font-family: 'Molle', cursive;
+        font-family: 'Montserrat', sans-serif;
+        */
+/* -----------COLORS END------------------------- */
+
+/* -----------REGULAR STYLES START--------------- */
+/* SKIP LINK STYLES*/
+#skip{
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+    }
+
+    #skip:focus{
+        position: static;
+        width: auto;
+        height: auto;
+    }
+
+	body {
+		font-family: 'Montserrat', sans-serif;
+	}
+
+   /* HEADER STYLES */
+  
+		header {
+			padding: 40px;
+			background-image: linear-gradient(var(--teal), var(--white));
+		}
+		
+		h1 {
+			font-family: 'Molle', cursive;
+			font-size: 4rem;
+		}
+
+		header p{
+			font-family: 'Montserrat', sans-serif;
+			font-size: 1.5rem;
+			line-height: 150%;
+		}
+
+		#logo {
+			position: relative;
+			right: 45px;
+			bottom: 20px;
+		}
+
+		header h2 {
+			visibility: hidden;
+			size: 0px;
+		}
+
+   /* HIDEEN MENU STYLES */
+
+		#menu-toggle {
+			display:block;
+			position: relative;
+			bottom: 240px;
+			left: 300px;
+		}
+
+		#menu-toggle a {
+			text-decoration: none;
+			color: var(--black);
+			
+		}
+
+		#menu-toggle a:hover {
+			color: var(--white);
+		}
+
+		#menu-toggle input {
+			display: block;
+			width: 30px;
+			height: 30px;
+			position: absolute;  
+			cursor: pointer; 
+			opacity: 0;
+		
+			
+		}
+		#menu-toggle label {
+			position: relative;
+			bottom: 10px;
+			right: 40px;
+			display: block;
+			width: 200px;
+			height: 30px;
+			color: var(--black);
+			background: var(--yellow);
+			font-weight: bold;
+			text-align: center;
+			padding-top: 20px;
+			-webkit-transform-origin: 4px 0px;  
+			-ms-transform-origin: 4px 0px;  
+			transform-origin: 4px 0px;
+			-webkit-transition: all 0.3s ease;
+			-o-transition: all 0.3s ease;
+			transition: all 0.3s ease;
+			}
+
+			#menu-toggle input:checked + label {
+				background: var(--black);
+				color: var(--white);
+				width: 475px;
+				padding: 20px;
+				padding-top: 60x;
+				position: relative;
+				right: 350px;
+				text-align: center;
+				font-weight: bold;
+				font-size: 2rem;
+			}
+				
+			ul {
+				position: absolute;
+				width: 475px;
+				padding: 10px;
+				padding-right: 275px;
+				background: var(--teal);
+				list-style-type: none;
+				/* Hiding menu off screen */
+				right: -200%;
+				-webkit-transition: right 0.3s ease;
+				-o-transition: right 0.3s ease;
+				transition: right 0.3s ease; 
+				/*having trouble with positioning*/
+			}
+			
+			nav li {
+				padding: 15px;
+				font-weight: bold;
+				font-size: 2rem;
+				color: var(--black);
+				width: 450px;
+				text-align: center;
+				/*having trouble getting border or black lines in bewteen*/
+			}
+
+			#menu-toggle input:checked ~ ul {
+				right: 0;
+			}
+
+	/* INTRO STYLES */
+
+			#intro {
+				padding:0 40px 40px 40px;
+			}
+
+			#intro h2 {
+				font-family: 'Molle', cursive;
+				font-size: 3.5rem;
+			}
+
+			#intro p {
+				font-family: 'Montserrat', sans-serif;
+				font-size: 1.25rem;
+				line-height: 150%;
+				padding-bottom: 20px;
+			}
+
+			#intro img {
+				width: 400px;
+				padding: 10px;
+				text-align: center;
+				/*having trouble with last image*/
+			}
+	/* PLAN STYLES */
+			
+			#plan {
+				background-color: var(--yellow);
+				padding: 50px;
+			}
+
+			#plan h3 {
+				font-family: 'Molle', cursive;
+				font-size: 2.5rem;
+				text-align: center;
+			}
+
+			#plan section {
+				background-color: var(--teal);
+				padding: 30px;
+				margin: 20px;
+				border: 4px solid;
+				border-radius: 5%;
+				border-color: white;
+				width: 300px;
+				text-align:center;
+			}
+
+			#plan h4 {
+				font-family: 'Montserrat', sans-serif;
+				font-size: 1.5rem;
+				font-weight: bold;
+				text-align: center;
+				text-transform: uppercase;
+				padding-bottom: 20px;
+			}
+
+	/* TESTIMONIALS STYLE */
+			
+			#testimonials {
+				padding: 40px;
+			}
+
+			#testimonials h3 {
+				font-family: 'Molle', cursive;
+				font-size: 2.5rem;
+				text-align: center;
+			}
+
+			#testimonials section {
+				text-align:center;
+				padding-bottom: 30px;
+			}
+
+			#testimonials h4 {
+				padding: 5px;
+				font-family: 'Montserrat', sans-serif;
+				font-size: 2rem;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+
+			#testimonials p, q {
+				font-family: 'Montserrat', sans-serif;
+				font-size: 1.25rem;
+				line-height: 150%;
+			}
+
+	/* ABOUT STYLES */
+
+			#about {
+				background-color: var(--blue);
+				padding: 40px;
+			}
+			#about div{
+				display:grid;
+				grid-template-columns: 1fr 1fr;
+				justify-items: center;
+			}
+
+			#about img {
+				padding: 20px;
+			}
+
+			#about h3 {
+				font-family: 'Molle', cursive;
+				font-size: 2.5rem;
+			}
+
+			#about h4 {
+				padding: 5px;
+				font-family: 'Montserrat', sans-serif;
+				font-size: 1.5rem;
+				font-weight: bold;
+				text-transform: uppercase;
+				text-align: center;
+			}
+
+			#about p{
+				font-family: 'Montserrat', sans-serif;
+				font-size: 1.25rem;
+				line-height: 150%;
+				text-align: center;
+			}
+
+	/* CONTACT US STYLES */
+
+			#contact {
+				padding: 40px;
+			}
+
+			#contact h3 {
+				font-family: 'Molle', cursive;
+				font-size: 2.5rem;
+			}
+
+			.form-required {
+				font-family: 'Montserrat', sans-serif;
+				font-size: 1.5rem;
+			}
+		
+	/* FORM STYLES */
+
+		form{
+			display: block;
+			width: 300px;
+			padding: 20px;
+			margin: 0 auto;
+			color: var(--black);
+			font-size: 1.5em;
+			font-weight: bold;
+		}
+		
+		input, label, .custom-select{
+			display: block;
+			width: 95%;
+		}
+		
+		.required{
+		display: inline-block;
+		color: var(--purple);
+		font-size: 1.1em;
+		font-weight: bold;
+		}
+		
+		label, legend{
+			padding-left: 0.5em;
+			margin: 0.75em 0 0.25em 0;
+			padding: 10px;
+		}
+		
+		input{
+			font-size: 1em;
+			padding: 0.25em 0.5em;
+			border: 3px solid var(--purple);
+			height: 1.5em;
+			margin-bottom: 15px;
+
+			
+		}
+
+		fieldset{
+			width: 300px;
+			display: grid;
+			grid-template: 1fr 1fr 1fr;
+		}
+
+		/* Having trouble getting the radio buttons and text to align correctly */
+		
+		
+		input[type=submit]{
+			padding: 0.75em;
+			margin-top: 20px;
+			/*having trouble getting more margin on top */
+			margin: auto;
+			width: 315px;
+			height:auto;
+			text-align: center;
+			color: var(--white);
+			background-color: var(--purple);
+			border: none;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 1.5rem;
+		}
+		
+		textarea{
+			width: 100%;
+			height: 5em;
+			margin-bottom: 1em;
+		}
+
+
+		.custom-select {
+			font-size: 1em;
+			padding: 0.25em 0.5em;
+			border: 3px solid var(--purple);
+			height: 1.5em;
+			text-decoration: none;
+		}
+
+/* FOOTER STYLES */
+		footer {
+			background-color: var(--light-gray);
+			padding: 40px;
+			text-align: center;
+			color: var(--dark-gray)
+		}
+
+		footer p{
+			padding: 10px;
+		}
+
+		footer a{
+			display: block;
+			padding: 10px;
+			text-decoration: none;
+			color: var(--dark-gray)
+		}
+
+
+
+/* -----------REGULAR STYLES END----------------- */
+
+/* -----------SMALL SCREEN START----------------- */
+/* -----------SMALL SCREEN END------------------- */
+
+/* -----------MEDIUM SCREEN START---------------- */
+/* -----------MEDIUM SCREEN END------------------ */
+
+/* -----------LARGE SCREEN START----------------- */
+/* -----------LARGE SCREEN END------------------- */
