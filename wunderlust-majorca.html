@@ -36,9 +36,13 @@
         <a id="skip" href="#main-content">Skip to Main Content</a>
         <!-- styling skip links: https://webaim.org/techniques/css/invisiblecontent/ -->
         <header>
+        <div id="header">
             <a href="index.html" id="logo"><img src="images/logo.png" alt="The Wunderlust logo shows blue waves and the outline of two palm trees against an orange sun"></a>
+            <section>
             <h1>Wunderlust</h1>
-			<p>Let Wunderlust Travel help you plan the trip of your dreams!</p>			
+			<p>Let Wunderlust Travel help you plan the trip of your dreams!</p>	
+            </section>
+        </div>		
             <nav>
                 <div id="menu-toggle">
                     <!-- responsive menu code from (with changes made to match mockups): https://css-tricks.com/three-css-alternatives-to-javascript-navigation/ -->
@@ -57,16 +61,18 @@
         </header>
         <main id="main-content">
             <article>
-                <div id="intro">  
+                <div id="intro"> 
+                    <div>
                     <h2>Majorca</h2>
                     <p>Imagine an island with turquoise blue waters, secret coves, soft golden sands, lush green foliage, rugged mountains, picturesque villages and a vibrant capital city. The island and its capital, Palma, are overflowing with character, while its beaches are famous all around the world, making it one of the most sought-after summer destinations.</p>
+                    </div> 
                     <div id="img-grid">
-                        <img src="images/majorca-waves.png" alt="Turquoise blue waters with white wave caps crashing against a rock cliff">
-                        <img src="images/majorca-beach.png" alt="A calm cove with turquoise waters calmly lapping at a light sand beach">
-                        <picture>
+                        <img src="images/majorca-waves.png" alt="Turquoise blue waters with white wave caps crashing against a rock cliff" class="img1">
+                        <img src="images/majorca-beach.png" alt="A calm cove with turquoise waters calmly lapping at a light sand beach" class="img2">
+                        <picture>  
                             <source srcset="images/majorca-cove-small.png"
                                 media="(max-width: 500px)">
-                            <img src="images/majorca-cove.png" alt="Deep blue water leading to the horizon with the island and trees in the foreground">
+                            <img src="images/majorca-cove.png" alt="Deep blue water leading to the horizon with the island and trees in the foreground" class="img3">
                         </picture>
                     </div>
                 </div>  
